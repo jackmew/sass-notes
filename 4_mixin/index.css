@@ -1,0 +1,25 @@
+/* use this 
+.box { 
+	@include border-radius(10px); 
+}
+*/
+body {
+  background: #0d1c6c; }
+
+header h1 {
+  color: #2b78ec;
+  background: #903b36;
+  /*or this*/
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px; }
+header h2 {
+  color: #2b78ec; }
+
+div a {
+  color: #ec0e21;
+  background: white; }
+div h1 {
+  color: #ec0e21;
+  background: #903b36; }

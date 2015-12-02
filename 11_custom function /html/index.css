@@ -1,0 +1,105 @@
+/* use this
+.box {
+@include border-radius(10px);
+}
+*/
+body {
+  background: #262626;
+  font-family: helvetica,ariel,sans-serif; }
+
+header {
+  margin: 20px 0 0 10%; }
+  header h1 {
+    color: #2b78ec; }
+  header h2 {
+    color: #2b78ec;
+    margin: 10px 10%; }
+
+p {
+  margin: 20px 5%; }
+
+a {
+  color: #2b78ec -100; }
+
+.grad {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
+  padding: 1%;
+  /*gradient*/
+  background-color: #bcb877;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#bcb877), to(#585413));
+  background-image: -webkit-linear-gradient(top, #bcb877, #585413);
+  background-image: -moz-linear-gradient(top, #bcb877, #585413);
+  background-image: -ms-linear-gradient(top, #bcb877, #585413);
+  background-image: -o-linear-gradient(top, #bcb877, #585413); }
+  .grad .intro, .grad .feature {
+    background: rgba(51, 51, 51, 0.3);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    border-radius: 20px;
+    color: #aaa;
+    width: 38.19444%;
+    float: left; }
+    .grad .intro .par1, .grad .feature .par1 {
+      color: #8fdcff; }
+      .grad .intro .par1 a, .grad .feature .par1 a {
+        font-size: 20px;
+        background: #bcb877;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        border-radius: 10px; }
+      .grad .intro .par1 a:hover, .grad .feature .par1 a:hover {
+        background: #585413; }
+  .grad .feature {
+    width: 61.80556%;
+    float: right; }
+
+ul.social-links li {
+  list-style: none; }
+  ul.social-links li a {
+    display: block;
+    float: left;
+    width: 65px;
+    height: 65px;
+    text-indent: -999px; }
+
+.facebook {
+  background: url("../img/facebook.png") no-repeat; }
+
+.googleplus {
+  background: url("../img/googleplus.png") no-repeat; }
+
+.linkedin {
+  background: url("../img/linkedin.png") no-repeat; }
+
+.twitter {
+  background: url("../img/twitter.png") no-repeat; }
+
+.three {
+  color: #1a1a1a; }
+
+.one {
+  background: black; }
+
+.two {
+  background: #141414; }
+
+.three {
+  background: white; }
+
+.four {
+  background: #3c3c3c; }
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  *zoom: 1; }

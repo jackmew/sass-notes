@@ -1,0 +1,52 @@
+/* use this 
+.box { 
+	@include border-radius(10px); 
+}
+*/
+body {
+  background: #0d1c6c;
+  font-family: helvetica,ariel,sans-serif; }
+
+header {
+  margin: 20px 0 0 10%; }
+  header h1 {
+    color: #2b78ec; }
+  header h2 {
+    color: #2b78ec;
+    margin: 10px 10%; }
+
+p {
+  margin: 20px 5%; }
+
+a {
+  color: #2b78ec -100; }
+
+.grad {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
+  padding: 1%;
+  /*gradient*/
+  background-color: #bcb877;
+  background-image: -webkit-linear-gradient(top, #bcb877, #585413);
+  background-image: linear-gradient(to bottom, #bcb877, #585413); }
+  .grad .intro, .grad .feature {
+    background: #333;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    border-radius: 20px; }
+    .grad .intro .par1, .grad .feature .par1 {
+      color: #8fdcff; }
+      .grad .intro .par1 a, .grad .feature .par1 a {
+        font-size: 20px;
+        background: #bcb877;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        border-radius: 10px; }
+      .grad .intro .par1 a:hover, .grad .feature .par1 a:hover {
+        background: #ffffdb; }
+  .grad .feature {
+    border: 1px solid blue; }

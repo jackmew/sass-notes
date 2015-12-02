@@ -1,0 +1,38 @@
+body {
+  background: #ca14c3; }
+
+.circle {
+  display: block;
+  background: #333;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  background-clip: padding-box;
+  background: #999999;
+  /*the same : .circle:hover */ }
+  .circle:hover {
+    background: black; }
+
+.triangle {
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 200px solid transparent;
+  border-bottom: 200px solid transparent;
+  border-left: 200px solid #cac680; }
+
+/*hide text*/
+.ir {
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent; }
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  *zoom: 1; }

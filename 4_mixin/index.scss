@@ -1,0 +1,39 @@
+$blue:#2b78ec;
+$red:#ec0e21;
+$h1background:#903b36;
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+/* use this 
+.box { 
+	@include border-radius(10px); 
+}
+*/
+
+body {
+	background:#0d1c6c;
+}
+header {
+	h1 {
+		color:$blue;
+		background:$h1background;
+		/*or this*/
+		@include border-radius(10px); 
+	}
+	h2 {
+		color:$blue;
+	}	
+}
+div {
+	a {
+		color:$red;
+		background:white;
+	}
+	h1 {
+		color:$red;
+		background:$h1background;
+	}
+}

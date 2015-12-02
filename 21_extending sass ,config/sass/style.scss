@@ -1,0 +1,34 @@
+@mixin phone($width: 70%) {
+    @media only screen and (max-width:480px) {
+        @content;
+    }
+}
+
+$width:40%;
+
+.main {
+    .header {
+        width:80%;
+        margin:0 auto;
+        height:200px;
+    }
+    @include phone {
+        .header {
+            width:$width;
+        }
+    }
+}
+
+
+#main %blue {
+    color:white;
+    background-color:blue;
+    font-size:14px;
+}
+
+.sign {
+    @extend %blue;
+}
+.box {
+    @extend %blue;
+}

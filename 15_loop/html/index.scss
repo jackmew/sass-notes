@@ -1,0 +1,119 @@
+$blue:#2b78ec;
+$margin:5%;
+$cream:#bcb877;
+$cream2:$cream - 100;
+
+@mixin border-radius($radius: 20px) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+/* use this
+.box {
+	@include border-radius(10px);
+}
+*/
+
+body {
+
+	font-family:helvetica,ariel,sans-serif;
+}
+header {
+	margin:20px 0 0 $margin + 5%;
+	h1{
+		color:$blue;
+	}
+	h2 {
+		color:$blue;
+		margin:10px $margin +5%;
+	}
+}
+p {
+	margin:20px $margin;
+}
+a{
+	color:$blue -100;
+}
+.grad {
+	@include border-radius;
+	padding:1%;
+	/*gradient*/
+	background-color: $cream;
+    background-image: -webkit-linear-gradient(top, $cream, $cream2);
+    background-image:         linear-gradient(to bottom, $cream, $cream2);
+
+    .intro {
+    	background:#333;
+    	@include border-radius;
+
+    	.par1 {
+    		color:$blue + 100;
+    		a {
+    			font-size:20px;
+    			background:$cream;
+    			@include border-radius(10px);
+    		}
+    		a:hover {
+    			background:$cream + 100;
+    		}
+    	}
+    }
+    .feature {
+    	@extend .intro;
+    	border:1px solid blue;
+    }
+ }
+
+ul.social-links li {
+    list-style:none;
+    a {
+        display:block;
+        float:left;
+        width:65px;
+        height:65px;
+        text-indent:-999px;
+    }
+}
+
+@function text-contrast($background) {
+    @if lightness($background) < 50% {
+        @return lighten($background,90%);
+    } @else {
+        @return darken($background,90%);
+    }
+
+}
+
+@each $p in (
+one black ,
+two black + 20,
+three white,
+four white - 40
+) {
+    .#{nth($p,1)} { background:nth($p,2); color:text-contrast(nth($p,2));}
+}
+
+$icons:(facebook,googleplus,linkedin,twitter);
+@each $social in $icons {
+    .#{$social} {
+        background:url('../img/#{$social}.png') no-repeat;
+    }
+}
+
+@for $i from 1 through 4 {
+    .par-#{$i} { margin-right:20px * $i;}
+}
+
+
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear:both;
+}
+.clearfix {
+    *zoom: 1;
+}

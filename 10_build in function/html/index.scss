@@ -1,0 +1,120 @@
+$blue:#2b78ec;
+$margin:5%;
+$cream:#bcb877;
+$cream2:$cream - 100;
+
+@mixin border-radius($radius: 20px) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+/* use this
+.box {
+@include border-radius(10px);
+}
+*/
+
+body {
+    background:#262626;
+    font-family:helvetica,ariel,sans-serif;
+}
+header {
+    margin:20px 0 0 $margin + 5%;
+    h1{
+        color:$blue;
+    }
+    h2 {
+        color:$blue;
+        margin:10px $margin +5%;
+    }
+}
+p {
+    margin:20px $margin;
+}
+a{
+    color:$blue -100;
+}
+.grad {
+    @include border-radius;
+    padding:1%;
+    /*gradient*/
+    background-color: $cream;
+    background-image: -webkit-gradient(linear, left top, left bottom , from($cream), to($cream2) );
+    background-image: -webkit-linear-gradient(top, $cream, $cream2);
+    background-image:    -moz-linear-gradient(top, $cream, $cream2);
+    background-image:     -ms-linear-gradient(top, $cream, $cream2);
+    background-image:      -o-linear-gradient(top, $cream, $cream2);
+
+    .intro {
+        background:fade-out(#333,0.7);
+        @include border-radius;
+        color:#aaa;
+        width:percentage(550px / 1440px);
+        float:left;
+
+        .par1 {
+            color:$blue + 100;
+            a {
+                font-size:20px;
+                background:$cream;
+                @include border-radius(10px);
+            }
+            a:hover {
+                background:$cream - 100;
+            }
+        }
+    }
+    .feature {
+        @extend .intro;
+        width:percentage(890px / 1440px);
+        float:right;
+    }
+}
+
+ul.social-links li {
+    list-style:none;
+    a {
+        display:block;
+        float:left;
+        width:65px;
+        height:65px;
+        text-indent:-999px;
+    }
+}
+$icons:(facebook,googleplus,linkedin,twitter);
+@each $social in $icons {
+    .#{$social} {
+        background:url('../img/#{$social}.png') no-repeat;
+    }
+}
+
+@function text-contrast($background,$val) {
+    @return ( $background + $val )
+}
+.three {
+    color:text-contrast(black + 40 ,100);
+}
+
+//nth(10px,20px,30px,1) ==> 10px
+//nth((Helvetica,Arial,sans-serii),3) ==> sans-serif
+
+@each $p in (
+one black ,
+two black + 20,
+three black + 40,
+four black + 60
+) {
+    .#{nth($p,1)} { background:#{nth($p,2)};}
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear:both;
+}
+.clearfix {
+    *zoom: 1;
+}

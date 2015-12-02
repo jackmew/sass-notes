@@ -1,0 +1,19 @@
+/* line 10, ../sass/style.scss */
+.main .header {
+  width: 80%;
+  margin: 0 auto;
+  height: 200px;
+}
+@media only screen and (max-width: 480px) {
+  /* line 16, ../sass/style.scss */
+  .main .header {
+    width: 40%;
+  }
+}
+
+/* line 23, ../sass/style.scss */
+#main .sign, #main .box {
+  color: white;
+  background-color: blue;
+  font-size: 14px;
+}

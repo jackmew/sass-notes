@@ -1,0 +1,26 @@
+$blue:#2b78ec;
+$red:#ec0e21;
+$h1background:#903b36;
+
+body {
+	background:#0d1c6c;
+}
+header {
+	h1 {
+		color:$blue;
+		background:$h1background;
+	}
+	h2 {
+		color:$blue;
+	}	
+}
+div {
+	a {
+		color:$red;
+		background:white;
+	}
+	h1 {
+		color:$red;
+		background:$h1background;
+	}
+}
